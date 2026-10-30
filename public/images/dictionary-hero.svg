@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 460" fill="none">
+<defs><linearGradient id="leaf" x2="1" y2="1"><stop stop-color="#d4e9ff"/><stop offset="1" stop-color="#9ac8ff"/></linearGradient><linearGradient id="blue" x2=".8" y2="1"><stop stop-color="#7dbaff"/><stop offset="1" stop-color="#1761de"/></linearGradient><linearGradient id="page" x2="0" y2="1"><stop stop-color="white"/><stop offset="1" stop-color="#e7f0ff"/></linearGradient></defs>
+<path d="M0 336C110 310 15 231 166 155c90-45 41-84 139-109-151-10-94-100-305-38Z" fill="#cde3ff" opacity=".5"/>
+<path d="M0 394c92-82-23-77 68-160 46-42 169-35 170-128-160 30-236 83-238 186Z" fill="url(#leaf)" opacity=".6"/>
+<path d="M1219 460c-34-151 41-187 89-206 107-42 48-111 92-150v356Z" fill="#c9e1ff" opacity=".5"/>
+<path d="M1227 321c-31-123 54-156 110-191 71-45 24-95 63-130-179 49-183 182-173 321Z" fill="url(#leaf)" opacity=".8"/>
+<path d="M1354 455c-41-81-20-118 32-154l14-44v203Z" fill="#add5ff" opacity=".7"/>
+<g opacity=".65"><path d="M73 460c11-84-27-127-19-159m34 159c3-76 52-122 53-173m-90 173c-26-61-20-104-40-128" stroke="#64aeb0" stroke-width="4"/>
+<path d="M69 412c-55-60-87-28-40 1l42 23m17-35c38-91 92-75 61-20l-61 37M56 366c-61-81-45-118-18-72l22 84m34 57c60-69 96-34 49-14l-46 31" fill="#73becb"/>
+<ellipse cx="55" cy="305" rx="13" ry="22" fill="#b7dbb6"/><ellipse cx="141" cy="287" rx="12" ry="19" fill="#45afd5"/></g>
+<g transform="translate(100 188) rotate(-25)"><rect width="57" height="57" rx="10" fill="url(#blue)"/><path d="m16 28 9 9 17-17" stroke="white" stroke-width="4" stroke-linecap="round"/></g>
+<g transform="translate(1185 308) rotate(10)"><path d="m-38 112 19-99 86 2 81-5-3 108-81 2-55-7Z" fill="#2f70ed"/><path d="m-42 107 20-96 87-2 79-6-2 108-82 4-55-8Z" fill="#ffc559"/><path d="m-39 100 19-92c36-9 65-1 85 6 31-18 60-21 77-19l-2 102c-30-3-55 3-74 11-23-11-48-14-71-8Z" fill="url(#page)"/><path d="m65 14 1 94" stroke="#b2d1f8" stroke-width="2"/>
+<g stroke="#cee1fa" stroke-width="3"><path d="m-5 29 45 3m-48 10 44 3m-47 10 44 3m-47 10 43 3m-46 10 42 3m43-52 49-14m-48 26 49-13m-48 26 46-12m-45 24 43-9m-42 21 40-8"/></g>
+<path d="m33 37 63 59" stroke="#1957c8" stroke-width="18" stroke-linecap="round"/><circle cx="11" cy="12" r="34" fill="#bfe1ff" fill-opacity=".6" stroke="url(#blue)" stroke-width="10"/><path d="M-10-5a27 27 0 0 1 22-11" stroke="white" stroke-width="4" stroke-linecap="round"/></g>
+<g font-family="Arial,sans-serif" font-size="20" font-style="italic"><g transform="translate(1186 105) rotate(12)"><rect width="128" height="44" rx="10" fill="white" opacity=".9"/><text x="14" y="29" fill="#1761de">Vocabulary</text></g><g transform="translate(1134 178) rotate(-4)"><rect width="110" height="44" rx="10" fill="#fff4f9"/><text x="16" y="29" fill="#cb397c">Grammar</text></g><g transform="translate(1203 238) rotate(-4)"><rect width="125" height="44" rx="10" fill="white"/><text x="14" y="29" fill="#1761de">Collocation</text></g></g>
+</svg>

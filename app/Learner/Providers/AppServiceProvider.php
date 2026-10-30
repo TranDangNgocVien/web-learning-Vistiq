@@ -1,0 +1,27 @@
+<?php
+
+namespace VistiqLearner\Providers;
+
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\ServiceProvider;
+use VistiqCore\Models\ExamAttempt;
+use VistiqLearner\Policies\AttemptPolicy;
+
+class AppServiceProvider extends ServiceProvider
+{
+    /**
+     * Register any application services.
+     */
+    public function register(): void
+    {
+        //
+    }
+
+    /**
+     * Bootstrap any application services.
+     */
+    public function boot(): void
+    {
+        Gate::policy(ExamAttempt::class, AttemptPolicy::class);
+    }
+}

@@ -1,0 +1,45 @@
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+
+# Local configuration and secrets
+**/.env
+**/.env.*
+!**/.env.example
+**/auth.json
+
+# Dependencies
+**/vendor/
+**/node_modules/
+
+# Laravel runtime and generated files
+**/storage/framework/cache/*
+**/storage/framework/sessions/*
+**/storage/framework/testing/*
+**/storage/framework/views/*
+**/storage/logs/*
+**/storage/app/public/*
+**/storage/app/retry-import/*
+**/storage/*.key
+**/bootstrap/cache/*.php
+**/public/build/
+**/public/hot
+**/database/*.sqlite
+**/database/*.sqlite-*
+**/database/data.sql
+**/database/*.dump
+**/.phpunit.result.cache
+
+# Local browser and acceptance artifacts
+**/storage/browser-*
+
+# Local architecture and assistant output
+**/graphify-out/
+**/docs/architecture/graphify/
+**/.claude/
+**/.mcp.json
+
+/public/storage

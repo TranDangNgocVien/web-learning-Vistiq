@@ -1,0 +1,30 @@
+﻿reading_key,reading_title,reading_body,exam_type,skill,exam_part,question_type,difficulty,prompt,option_a,option_b,option_c,option_d,correct_option,accepted_answers,explanation,tags,payload_json,sample_note
+TOEIC-P7-001,Office Relocation Notice,"<p>Dear employees,</p>
+<p>Our office will move to 24 River Street on May 12. The new building is opposite the central library and has a larger meeting room. The office will be closed on May 10 and 11 while equipment is transported.</p>
+<p>Please pack your desk materials by May 9. Contact Ms. Chen in Administration if you need packing boxes.</p>",toeic,reading,part-7,multiple_choice,easy,What is the purpose of the notice?,To announce an office move,To introduce a new manager,To invite staff to a conference,To extend library opening hours,A,,Thông báo nêu địa điểm và ngày chuyển văn phòng.,,,
+TOEIC-P7-001,Office Relocation Notice,"<p>Dear employees,</p>
+<p>Our office will move to 24 River Street on May 12. The new building is opposite the central library and has a larger meeting room. The office will be closed on May 10 and 11 while equipment is transported.</p>
+<p>Please pack your desk materials by May 9. Contact Ms. Chen in Administration if you need packing boxes.</p>",toeic,reading,part-7,multiple_choice,medium,When will employees begin working at the new office?,May 9,May 10,May 11,May 12,D,,Ngày chuyển đến địa chỉ mới là May 12.,,,
+TOEIC-P7-001,Office Relocation Notice,"<p>Dear employees,</p>
+<p>Our office will move to 24 River Street on May 12. The new building is opposite the central library and has a larger meeting room. The office will be closed on May 10 and 11 while equipment is transported.</p>
+<p>Please pack your desk materials by May 9. Contact Ms. Chen in Administration if you need packing boxes.</p>",toeic,reading,part-7,multiple_choice,medium,Who should employees contact for packing boxes?,The library director,Ms. Chen,The transport driver,The meeting organizer,B,,Câu cuối yêu cầu liên hệ Ms. Chen để nhận thùng đóng gói.,,,
+TOEIC-P6-001,Training Invitation,"<p>Dear colleagues,</p>
+<p>You are invited to a customer service workshop that will be (1) _____ on June 18. The session begins at 9 a.m. and will focus on ways to (2) _____ customer concerns.</p>
+<p>(3) _____, participants will practice these techniques in small groups. (4) _____</p>
+<p>Please register with the training team by June 12.</p>",toeic,reading,part-6,multiple_choice,easy,Choose the best word for blank (1).,hold,held,holding,holds,B,,Cấu trúc bị động will be + quá khứ phân từ: held.,,,
+TOEIC-P6-001,Training Invitation,"<p>Dear colleagues,</p>
+<p>You are invited to a customer service workshop that will be (1) _____ on June 18. The session begins at 9 a.m. and will focus on ways to (2) _____ customer concerns.</p>
+<p>(3) _____, participants will practice these techniques in small groups. (4) _____</p>
+<p>Please register with the training team by June 12.</p>",toeic,reading,part-6,multiple_choice,medium,Choose the best word for blank (2).,address,addresses,addressed,addressing,A,,Sau to dùng động từ nguyên mẫu: address customer concerns.,,,
+TOEIC-P6-001,Training Invitation,"<p>Dear colleagues,</p>
+<p>You are invited to a customer service workshop that will be (1) _____ on June 18. The session begins at 9 a.m. and will focus on ways to (2) _____ customer concerns.</p>
+<p>(3) _____, participants will practice these techniques in small groups. (4) _____</p>
+<p>Please register with the training team by June 12.</p>",toeic,reading,part-6,multiple_choice,medium,Choose the best expression for blank (3).,Otherwise,However,Afterward,Instead,C,,Afterward nối phần trình bày với hoạt động thực hành diễn ra sau đó.,,,
+TOEIC-P6-001,Training Invitation,"<p>Dear colleagues,</p>
+<p>You are invited to a customer service workshop that will be (1) _____ on June 18. The session begins at 9 a.m. and will focus on ways to (2) _____ customer concerns.</p>
+<p>(3) _____, participants will practice these techniques in small groups. (4) _____</p>
+<p>Please register with the training team by June 12.</p>",toeic,reading,part-6,multiple_choice,medium,Choose the best sentence for blank (4).,The library will close for repairs.,All invoices must be paid today.,The new office is across the street.,This practice will help you apply the methods at work.,D,,Câu này tiếp tục nói về lợi ích của hoạt động thực hành ở câu trước.,,,
+IELTS-R1-001,Community Gardens,"<p>A. In 2018, residents of Westbrook converted an unused car park into a community garden. Volunteers grow vegetables and share the harvest with a local food bank.</p>
+<p>B. The garden opens every Saturday. New volunteers attend a short safety session before using the tools. Researchers are studying whether the project has increased contact between neighbours; results have not yet been published.</p>",ielts,reading,reading-part-1,short_answer,easy,What was the site used for before the garden opened? Answer with NO MORE THAN TWO WORDS.,,,,,,car park,Đoạn A nêu rõ khu đất trước đây là an unused car park.,,"{""metadata"":{""max_words"":2}}",
+IELTS-R1-001,Community Gardens,"<p>A. In 2018, residents of Westbrook converted an unused car park into a community garden. Volunteers grow vegetables and share the harvest with a local food bank.</p>
+<p>B. The garden opens every Saturday. New volunteers attend a short safety session before using the tools. Researchers are studying whether the project has increased contact between neighbours; results have not yet been published.</p>",ielts,reading,reading-part-1,true_false_not_given,medium,The garden is open to volunteers every day.,,,,,,,"Đoạn B chỉ nói mở cửa vào mỗi thứ Bảy, nên nhận định every day là FALSE.",,"{""options"":{""TRUE"":""True"",""FALSE"":""False"",""NOT_GIVEN"":""Not Given""},""correct_options"":[""FALSE""]}",

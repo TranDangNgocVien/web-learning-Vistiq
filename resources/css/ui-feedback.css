@@ -1,0 +1,41 @@
+.admin-toast { position:fixed; z-index:1100; top:84px; right:24px; display:flex; align-items:center; justify-content:space-between; gap:12px; width:max-content; max-width:min(520px,calc(100vw - 32px)); margin:0; padding:13px 16px; border:1px solid #b9e4ce; border-radius:12px; color:#176b45; background:#f0fbf5; box-shadow:0 12px 32px rgba(18,52,39,.18); font-size:13px; font-weight:650; opacity:1; transform:translateY(0); transition:opacity .22s ease,transform .22s ease; }
+.admin-toast.is-leaving { opacity:0; transform:translateY(-7px); }
+.admin-toast button, [data-ui-feedback] button { flex:none; padding:0 2px; border:0; background:transparent; color:inherit; font-size:20px; line-height:1; cursor:pointer; }
+.admin-toast-warning { border-color:#f0d49a; color:#8a5a00; background:#fff8e7; box-shadow:0 12px 32px rgba(112,76,5,.16); }
+.admin-toast .import-errors { flex:none; font-size:12px; font-weight:500; }
+.admin-toast .import-errors summary { cursor:pointer; font-weight:700; }
+.admin-toast .import-errors ul { max-height:180px; margin:8px 0 0; padding-left:18px; overflow:auto; font-weight:500; }
+@media(max-width:600px) { .admin-toast { right:12px; left:12px; width:auto; max-width:none; } }
+@media(max-width:1024px) {
+    .admin-toast { max-height: calc(100dvh - 120px); overflow-y: auto; align-items: flex-start; overflow-wrap: anywhere; }
+    .admin-toast button, [data-ui-feedback] button { min-width: 44px; min-height: 44px; }
+}
+[data-ajax-filter-form][aria-busy="true"] { cursor:progress; }
+[data-ajax-filter-form] + .ajax-filter-status { min-height:1.2em; margin:4px 0 0; color:var(--muted,#71809b); font-size:.78rem; }
+[data-ajax-results][aria-busy="true"] { opacity:.62; transition:opacity 140ms ease; }
+@media(prefers-reduced-motion:reduce) { [data-ajax-results][aria-busy="true"] { transition:none; } }
+.table-responsive { max-width:100%; overflow-x:auto; }
+.form-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+.form-field { display:flex; flex-direction:column; gap:6px; min-width:0; color:var(--ink); font-weight:600; }
+.form-field input:not([type="checkbox"]):not([type="radio"]), .form-field select, .form-field textarea { width:100%; max-width:100%; padding:10px 12px; border:1px solid var(--line); border-radius:8px; background:var(--card, #fff); color:var(--ink); font:inherit; font-weight:400; }
+.form-field textarea { min-height:110px; resize:vertical; }
+.form-field small { color:var(--ink-soft); font-weight:400; }
+.form-field-error { color:#a34359; font-weight:500; }
+.form-wide { grid-column:1 / -1; }
+.workspace-with-preview { display:grid; grid-template-columns:minmax(0,2fr) minmax(250px,1fr); align-items:start; gap:20px; }
+.workspace-with-preview > * { min-width:0; overflow-wrap:anywhere; }
+[aria-disabled="true"][data-report-export] { pointer-events:none; opacity:.65; }
+:focus-visible { outline:3px solid var(--blue, #0b66ef); outline-offset:3px; }
+@media(max-width:900px) { .workspace-with-preview { grid-template-columns:minmax(0,1fr); } }
+@media(max-width:600px) { .form-grid { grid-template-columns:minmax(0,1fr); } .assessment-chart { min-width:520px; } }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto !important; } *, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; } }
+
+.profile-tabs { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 18px; }
+.profile-tabs a { display:block; padding:8px 12px; border:1px solid var(--line); border-radius:8px; color:var(--ink); }
+.profile-tabs a[aria-current="page"] { background:var(--blue); color:white; }
+.profile-avatar { width:100px; height:100px; object-fit:cover; border-radius:50%; }
+.audit-diff { max-width:36rem; white-space:pre-wrap; overflow-wrap:anywhere; font-size:12px; }
+.checksum { overflow-wrap:anywhere; white-space:normal; }
+.panel form { min-width:0; }
+.profile-section-select { display:none; }
+@media(max-width:600px) { .profile-section-select { display:flex; margin:0 0 18px; } .profile-desktop-tabs { display:none; } }

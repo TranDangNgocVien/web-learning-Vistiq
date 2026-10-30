@@ -1,0 +1,21 @@
+﻿question_type,name,family,skills,note
+multiple_choice,Trắc nghiệm một đáp án,choice,reading|listening,Điền option_a đến option_d và correct_option=A/B/C/D. TOEIC Part 2 chỉ dùng A/B/C; các Part khác dùng A/B/C/D.
+multiple_response,Trắc nghiệm nhiều đáp án,choice,reading|listening,"payload_json.options chứa các lựa chọn; correct_options là mảng, ví dụ [""A"",""C""]. Ghi số đáp án cần chọn trong prompt."
+true_false_not_given,True / False / Not Given,choice,reading,"payload_json.options dùng đúng thứ tự khóa TRUE, FALSE, NOT_GIVEN. correct_options chứa đúng một khóa."
+yes_no_not_given,Yes / No / Not Given,choice,reading,"payload_json.options dùng đúng thứ tự khóa YES, NO, NOT_GIVEN. correct_options chứa đúng một khóa."
+matching,Nối đáp án,matching,reading|listening,payload_json.options chứa đáp án A/B/C...; metadata.answer_map nối mã hàng với khóa đáp án; metadata.labels mô tả từng hàng.
+matching_information,Nối thông tin với đoạn văn,matching,reading,Đánh nhãn đoạn A/B/C... trong prompt. metadata.answer_map dùng khóa đáp án tồn tại trong options.
+matching_headings,Nối tiêu đề đoạn,matching,reading,options là danh sách tiêu đề. metadata.answer_map nối mỗi đoạn với tiêu đề; labels là nhãn đoạn.
+matching_features,Nối đặc điểm,matching,reading,options là người/đối tượng. metadata.answer_map nối đặc điểm với đối tượng; labels là mô tả đặc điểm.
+matching_sentence_endings,Nối phần cuối câu,matching,reading,options là phần cuối câu. metadata.labels chứa phần đầu câu; answer_map nối đầu câu với đáp án.
+sentence_completion,Hoàn thành câu,text,reading|listening,"Một chỗ trống dùng accepted_answers, ngăn cách biến thể bằng |; metadata.max_words/max_numbers đặt giới hạn."
+summary_completion,Hoàn thành tóm tắt,text,reading|listening,"Một chỗ trống dùng accepted_answers. Nhiều chỗ trống dùng metadata.blanks, mỗi ô có label và accepted_answers."
+note_completion,Hoàn thành ghi chú,text,reading|listening,Ví dụ mẫu có hai ô trong metadata.blanks. Mỗi ô có danh sách đáp án và giới hạn từ/số riêng.
+table_completion,Hoàn thành bảng,text,reading|listening,"Đưa bảng vào prompt; một ô dùng accepted_answers, nhiều ô dùng metadata.blanks."
+flow_chart_completion,Hoàn thành lưu đồ,text,reading|listening,Mô tả các bước trong prompt; mỗi bước trống dùng một phần tử metadata.blanks hoặc accepted_answers.
+form_completion,Hoàn thành biểu mẫu,text,listening,"Dùng cho IELTS Listening. Giữ chính xác tên, địa chỉ, số điện thoại trong accepted_answers hoặc metadata.blanks."
+diagram_label_completion,Điền nhãn sơ đồ,text,reading|listening,BẮT BUỘC thay metadata.image_id=null bằng ID ảnh trong kho Media. Đáp án ghi vào accepted_answers hoặc metadata.blanks.
+plan_map_labelling,Điền nhãn bản đồ,text,listening,Dùng cho IELTS Listening. BẮT BUỘC thay metadata.image_id=null bằng ID ảnh bản đồ và liên kết audio trước khi xuất bản.
+short_answer,Trả lời ngắn,text,reading|listening,accepted_answers chứa các biến thể đúng. metadata.max_words/max_numbers là giới hạn trả lời.
+essay,Writing,writing,writing,"metadata.rubric cần đủ task_response, coherence, lexical_resource, grammar. Ghi variant=academic/general và min_words=150/250 tùy task."
+speaking,Speaking,speaking,speaking,"metadata.rubric cần đủ fluency, lexical_resource, grammar, pronunciation. Part 2 có cue_card; câu hỏi phụ nằm trong follow_ups."

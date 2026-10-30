@@ -1,0 +1,634 @@
+{
+  "parts": [
+    {
+      "exam_type": "toeic",
+      "skill": "listening",
+      "exam_part": "part-1",
+      "name": "Part 1 · Photographs",
+      "types": [
+        "multiple_choice"
+      ],
+      "note": "Nghe mô tả ảnh, chọn 1 trong 4 đáp án. Cần ảnh; tải và gắn audio riêng sau khi import. Không đưa transcript vào prompt."
+    },
+    {
+      "exam_type": "toeic",
+      "skill": "listening",
+      "exam_part": "part-2",
+      "name": "Part 2 · Question-Response",
+      "types": [
+        "multiple_choice"
+      ],
+      "note": "Nghe câu hỏi/câu nói và chọn phản hồi. Chỉ 3 lựa chọn A/B/C, để option_d trống. Tải và gắn audio riêng sau khi import."
+    },
+    {
+      "exam_type": "toeic",
+      "skill": "listening",
+      "exam_part": "part-3",
+      "name": "Part 3 · Conversations",
+      "types": [
+        "multiple_choice"
+      ],
+      "note": "Nghe hội thoại và trả lời câu hỏi. Mỗi câu 4 lựa chọn; dùng chung audio_group, rồi tải và gắn audio riêng sau khi import."
+    },
+    {
+      "exam_type": "toeic",
+      "skill": "listening",
+      "exam_part": "part-4",
+      "name": "Part 4 · Talks",
+      "types": [
+        "multiple_choice"
+      ],
+      "note": "Nghe bài nói/thông báo và trả lời câu hỏi. Mỗi câu 4 lựa chọn; tải và gắn audio riêng sau khi import."
+    },
+    {
+      "exam_type": "toeic",
+      "skill": "reading",
+      "exam_part": "part-5",
+      "name": "Part 5 · Incomplete Sentences",
+      "types": [
+        "multiple_choice"
+      ],
+      "note": "Hoàn thành một câu bằng ngữ pháp hoặc từ vựng phù hợp. Đặt câu có chỗ trống trong prompt; 4 lựa chọn."
+    },
+    {
+      "exam_type": "toeic",
+      "skill": "reading",
+      "exam_part": "part-6",
+      "name": "Part 6 · Text Completion",
+      "types": [
+        "multiple_choice"
+      ],
+      "note": "Hoàn thành đoạn văn. Đưa đủ ngữ cảnh đoạn vào prompt hoặc passage; mỗi câu 4 lựa chọn."
+    },
+    {
+      "exam_type": "toeic",
+      "skill": "reading",
+      "exam_part": "part-7",
+      "name": "Part 7 · Reading Comprehension",
+      "types": [
+        "multiple_choice"
+      ],
+      "note": "Đọc một hoặc nhiều tài liệu rồi trả lời. Đưa đủ tài liệu vào prompt hoặc passage; mỗi câu 4 lựa chọn."
+    },
+    {
+      "exam_type": "ielts",
+      "skill": "listening",
+      "exam_part": "listening-part-1",
+      "name": "Listening Part 1",
+      "types": [
+        "multiple_choice",
+        "multiple_response",
+        "matching",
+        "sentence_completion",
+        "summary_completion",
+        "note_completion",
+        "table_completion",
+        "flow_chart_completion",
+        "form_completion",
+        "diagram_label_completion",
+        "plan_map_labelling",
+        "short_answer"
+      ],
+      "note": "Gom các câu cùng bài nghe bằng audio_group; tải audio riêng rồi gắn vào nhóm sau khi import."
+    },
+    {
+      "exam_type": "ielts",
+      "skill": "listening",
+      "exam_part": "listening-part-2",
+      "name": "Listening Part 2",
+      "types": [
+        "multiple_choice",
+        "multiple_response",
+        "matching",
+        "sentence_completion",
+        "summary_completion",
+        "note_completion",
+        "table_completion",
+        "flow_chart_completion",
+        "form_completion",
+        "diagram_label_completion",
+        "plan_map_labelling",
+        "short_answer"
+      ],
+      "note": "Gom các câu cùng bài nghe bằng audio_group; tải audio riêng rồi gắn vào nhóm sau khi import."
+    },
+    {
+      "exam_type": "ielts",
+      "skill": "listening",
+      "exam_part": "listening-part-3",
+      "name": "Listening Part 3",
+      "types": [
+        "multiple_choice",
+        "multiple_response",
+        "matching",
+        "sentence_completion",
+        "summary_completion",
+        "note_completion",
+        "table_completion",
+        "flow_chart_completion",
+        "form_completion",
+        "diagram_label_completion",
+        "plan_map_labelling",
+        "short_answer"
+      ],
+      "note": "Gom các câu cùng bài nghe bằng audio_group; tải audio riêng rồi gắn vào nhóm sau khi import."
+    },
+    {
+      "exam_type": "ielts",
+      "skill": "listening",
+      "exam_part": "listening-part-4",
+      "name": "Listening Part 4",
+      "types": [
+        "multiple_choice",
+        "multiple_response",
+        "matching",
+        "sentence_completion",
+        "summary_completion",
+        "note_completion",
+        "table_completion",
+        "flow_chart_completion",
+        "form_completion",
+        "diagram_label_completion",
+        "plan_map_labelling",
+        "short_answer"
+      ],
+      "note": "Gom các câu cùng bài nghe bằng audio_group; tải audio riêng rồi gắn vào nhóm sau khi import."
+    },
+    {
+      "exam_type": "ielts",
+      "skill": "reading",
+      "exam_part": "reading-part-1",
+      "name": "Reading Part 1",
+      "types": [
+        "multiple_choice",
+        "multiple_response",
+        "true_false_not_given",
+        "yes_no_not_given",
+        "matching",
+        "matching_information",
+        "matching_headings",
+        "matching_features",
+        "matching_sentence_endings",
+        "sentence_completion",
+        "summary_completion",
+        "note_completion",
+        "table_completion",
+        "flow_chart_completion",
+        "diagram_label_completion",
+        "short_answer"
+      ],
+      "note": "Part 1/2/3 là thứ tự passage/section trong Vistiq; loại câu hỏi không cố định riêng cho một Part."
+    },
+    {
+      "exam_type": "ielts",
+      "skill": "reading",
+      "exam_part": "reading-part-2",
+      "name": "Reading Part 2",
+      "types": [
+        "multiple_choice",
+        "multiple_response",
+        "true_false_not_given",
+        "yes_no_not_given",
+        "matching",
+        "matching_information",
+        "matching_headings",
+        "matching_features",
+        "matching_sentence_endings",
+        "sentence_completion",
+        "summary_completion",
+        "note_completion",
+        "table_completion",
+        "flow_chart_completion",
+        "diagram_label_completion",
+        "short_answer"
+      ],
+      "note": "Part 1/2/3 là thứ tự passage/section trong Vistiq; loại câu hỏi không cố định riêng cho một Part."
+    },
+    {
+      "exam_type": "ielts",
+      "skill": "reading",
+      "exam_part": "reading-part-3",
+      "name": "Reading Part 3",
+      "types": [
+        "multiple_choice",
+        "multiple_response",
+        "true_false_not_given",
+        "yes_no_not_given",
+        "matching",
+        "matching_information",
+        "matching_headings",
+        "matching_features",
+        "matching_sentence_endings",
+        "sentence_completion",
+        "summary_completion",
+        "note_completion",
+        "table_completion",
+        "flow_chart_completion",
+        "diagram_label_completion",
+        "short_answer"
+      ],
+      "note": "Part 1/2/3 là thứ tự passage/section trong Vistiq; loại câu hỏi không cố định riêng cho một Part."
+    },
+    {
+      "exam_type": "ielts",
+      "skill": "speaking",
+      "exam_part": "speaking-part-1",
+      "name": "Speaking Part 1",
+      "types": [
+        "speaking"
+      ],
+      "note": "Hỏi về chủ đề quen thuộc."
+    },
+    {
+      "exam_type": "ielts",
+      "skill": "speaking",
+      "exam_part": "speaking-part-2",
+      "name": "Speaking Part 2",
+      "types": [
+        "speaking"
+      ],
+      "note": "Cue card, 1 phút chuẩn bị, tối đa 2 phút nói."
+    },
+    {
+      "exam_type": "ielts",
+      "skill": "speaking",
+      "exam_part": "speaking-part-3",
+      "name": "Speaking Part 3",
+      "types": [
+        "speaking"
+      ],
+      "note": "Thảo luận sâu hơn, có phân tích và lập luận."
+    },
+    {
+      "exam_type": "ielts",
+      "skill": "writing",
+      "exam_part": "writing-task-1",
+      "name": "Writing Task 1",
+      "types": [
+        "essay"
+      ],
+      "note": "Academic: mô tả dữ liệu/biểu đồ; General: thư. Tối thiểu 150 từ."
+    },
+    {
+      "exam_type": "ielts",
+      "skill": "writing",
+      "exam_part": "writing-task-2",
+      "name": "Writing Task 2",
+      "types": [
+        "essay"
+      ],
+      "note": "Bài luận, tối thiểu 250 từ."
+    },
+    {
+      "exam_type": "ielts",
+      "skill": "listening",
+      "exam_part": "listening",
+      "name": "listening · mã tổng hợp",
+      "types": [
+        "multiple_choice",
+        "multiple_response",
+        "matching",
+        "sentence_completion",
+        "summary_completion",
+        "note_completion",
+        "table_completion",
+        "flow_chart_completion",
+        "form_completion",
+        "diagram_label_completion",
+        "plan_map_labelling",
+        "short_answer"
+      ],
+      "note": "Mã tổng hợp đã có trong danh mục; ưu tiên mã có Part khi biên soạn mới."
+    },
+    {
+      "exam_type": "ielts",
+      "skill": "reading",
+      "exam_part": "reading",
+      "name": "reading · mã tổng hợp",
+      "types": [
+        "multiple_choice",
+        "multiple_response",
+        "true_false_not_given",
+        "yes_no_not_given",
+        "matching",
+        "matching_information",
+        "matching_headings",
+        "matching_features",
+        "matching_sentence_endings",
+        "sentence_completion",
+        "summary_completion",
+        "note_completion",
+        "table_completion",
+        "flow_chart_completion",
+        "diagram_label_completion",
+        "short_answer"
+      ],
+      "note": "Mã tổng hợp đã có trong danh mục; ưu tiên mã có Part khi biên soạn mới."
+    },
+    {
+      "exam_type": "ielts",
+      "skill": "speaking",
+      "exam_part": "speaking",
+      "name": "speaking · mã tổng hợp",
+      "types": [
+        "speaking"
+      ],
+      "note": "Mã tổng hợp đã có trong danh mục; ưu tiên mã có Part khi biên soạn mới."
+    }
+  ],
+  "difficulties": [
+    {
+      "code": "easy",
+      "name": "Dễ",
+      "rule": "Thông tin trực tiếp; từ vựng quen thuộc; cấu trúc đơn giản; một bước xử lý; phương án nhiễu dễ phân biệt.",
+      "listening": "Audio ngắn, thông tin rõ, một chi tiết như tên/giờ/địa điểm.",
+      "reading": "Tìm một thông tin hoặc điểm ngữ pháp cơ bản, ít paraphrase.",
+      "productive": "Writing/Speaking: chủ đề quen thuộc, yêu cầu cụ thể, ít ý cần phát triển."
+    },
+    {
+      "code": "medium",
+      "name": "Trung bình",
+      "rule": "Cần paraphrase, kết hợp hai chi tiết hoặc xử lý ngữ cảnh; có phương án nhiễu hợp lý.",
+      "listening": "Tốc độ tự nhiên; cần theo dõi nhiều lượt nói hoặc kết hợp hai chi tiết.",
+      "reading": "Kết nối hai câu, nhận ra cách diễn đạt tương đương hoặc quan hệ trong đoạn.",
+      "productive": "Writing/Speaking: cần so sánh, giải thích và đưa ví dụ, phát triển vài ý."
+    },
+    {
+      "code": "hard",
+      "name": "Khó",
+      "rule": "Cần suy luận hoặc tổng hợp nhiều nguồn; ngôn ngữ phức tạp; phương án gần đúng hoặc thông tin gây nhiễu.",
+      "listening": "Nhiều người nói hoặc ý ngầm; cần suy luận quan hệ hay thay đổi quyết định.",
+      "reading": "Đối chiếu nhiều đoạn/tài liệu, nhận ra thái độ hoặc hàm ý, phân biệt nhiễu gần đúng.",
+      "productive": "Writing/Speaking: chủ đề trừu tượng, lập luận nhiều chiều, đánh giá và khái quát hóa."
+    }
+  ],
+  "columns": [
+    [
+      "exam_type",
+      "Khuyến nghị",
+      "toeic hoặc ielts. Nếu có giá trị, phải trùng kỳ thi của exam_part."
+    ],
+    [
+      "skill",
+      "Khuyến nghị",
+      "listening, reading, writing hoặc speaking. Nếu có giá trị, phải trùng kỹ năng của exam_part."
+    ],
+    [
+      "exam_part",
+      "Bắt buộc",
+      "Dùng đúng mã trong bảng Part/Kỹ năng. Có thể dùng ID hiện có, nhưng mã dễ chuyển giữa các môi trường hơn."
+    ],
+    [
+      "question_type",
+      "Khuyến nghị",
+      "Một trong 20 mã loại câu hỏi. Bỏ trống mới dùng giá trị mặc định trên form Import. Mã gõ sai sẽ báo lỗi."
+    ],
+    [
+      "difficulty",
+      "Khuyến nghị",
+      "easy, medium hoặc hard. Bỏ trống mới dùng giá trị mặc định; không tự suy ra theo số Part."
+    ],
+    [
+      "prompt",
+      "Bắt buộc",
+      "Nội dung câu hỏi. Có thể chứa HTML an toàn. Passage Reading có thể đặt trong prompt hoặc liên kết qua stimulus."
+    ],
+    [
+      "option_a / option_b / option_c / option_d",
+      "Theo dạng",
+      "Dùng cho trắc nghiệm A-D đơn giản; Part 2 TOEIC để option_d trống. Dạng nâng cao dùng payload_json.options."
+    ],
+    [
+      "correct_option",
+      "Theo dạng",
+      "Một khóa A/B/C/D tương ứng đáp án đúng. Dạng nâng cao dùng payload_json.correct_options."
+    ],
+    [
+      "accepted_answers",
+      "Theo dạng",
+      "Một ô điền/trả lời ngắn: phân tách biến thể bằng |, ví dụ bicycle|bike. Không nhập công thức Excel."
+    ],
+    [
+      "explanation",
+      "Nên có",
+      "Giải thích đáp án đúng và lý do loại các phương án nhiễu."
+    ],
+    [
+      "tags",
+      "Tùy chọn",
+      "Nhiều tag phân tách bằng dấu phẩy; CSV tự bao dấu nháy kép cho ô có dấu phẩy."
+    ],
+    [
+      "stimulus",
+      "Khi có passage Reading",
+      "ID hoặc tiêu đề chính xác của passage đã có trong kho. Listening audio tải và gắn riêng sau khi import."
+    ],
+    [
+      "status",
+      "Bản nháp",
+      "Dùng draft. Mọi câu import đều vào bản nháp để rà soát, duyệt và xuất bản."
+    ],
+    [
+      "payload_json",
+      "Dạng nâng cao",
+      "JSON object chứa options, correct_options, accepted_answers, metadata. Những trường này ghi đè cột đơn giản nếu được nhập trong JSON."
+    ],
+    [
+      "sample_note",
+      "Chỉ hướng dẫn",
+      "Ghi chú cách dùng dòng mẫu, kịch bản audio và media cần bổ sung. Không nhập vào nội dung câu hỏi. Có thể xóa cột này."
+    ]
+  ],
+  "types": [
+    {
+      "code": "multiple_choice",
+      "name": "Trắc nghiệm một đáp án",
+      "family": "choice",
+      "skills": [
+        "reading",
+        "listening"
+      ],
+      "note": "Điền option_a đến option_d và correct_option=A/B/C/D. TOEIC Part 2 chỉ dùng A/B/C; các Part khác dùng A/B/C/D."
+    },
+    {
+      "code": "multiple_response",
+      "name": "Trắc nghiệm nhiều đáp án",
+      "family": "choice",
+      "skills": [
+        "reading",
+        "listening"
+      ],
+      "note": "payload_json.options chứa các lựa chọn; correct_options là mảng, ví dụ [\"A\",\"C\"]. Ghi số đáp án cần chọn trong prompt."
+    },
+    {
+      "code": "true_false_not_given",
+      "name": "True / False / Not Given",
+      "family": "choice",
+      "skills": [
+        "reading"
+      ],
+      "note": "payload_json.options dùng đúng thứ tự khóa TRUE, FALSE, NOT_GIVEN. correct_options chứa đúng một khóa."
+    },
+    {
+      "code": "yes_no_not_given",
+      "name": "Yes / No / Not Given",
+      "family": "choice",
+      "skills": [
+        "reading"
+      ],
+      "note": "payload_json.options dùng đúng thứ tự khóa YES, NO, NOT_GIVEN. correct_options chứa đúng một khóa."
+    },
+    {
+      "code": "matching",
+      "name": "Nối đáp án",
+      "family": "matching",
+      "skills": [
+        "reading",
+        "listening"
+      ],
+      "note": "payload_json.options chứa đáp án A/B/C...; metadata.answer_map nối mã hàng với khóa đáp án; metadata.labels mô tả từng hàng."
+    },
+    {
+      "code": "matching_information",
+      "name": "Nối thông tin với đoạn văn",
+      "family": "matching",
+      "skills": [
+        "reading"
+      ],
+      "note": "Đánh nhãn đoạn A/B/C... trong prompt. metadata.answer_map dùng khóa đáp án tồn tại trong options."
+    },
+    {
+      "code": "matching_headings",
+      "name": "Nối tiêu đề đoạn",
+      "family": "matching",
+      "skills": [
+        "reading"
+      ],
+      "note": "options là danh sách tiêu đề. metadata.answer_map nối mỗi đoạn với tiêu đề; labels là nhãn đoạn."
+    },
+    {
+      "code": "matching_features",
+      "name": "Nối đặc điểm",
+      "family": "matching",
+      "skills": [
+        "reading"
+      ],
+      "note": "options là người/đối tượng. metadata.answer_map nối đặc điểm với đối tượng; labels là mô tả đặc điểm."
+    },
+    {
+      "code": "matching_sentence_endings",
+      "name": "Nối phần cuối câu",
+      "family": "matching",
+      "skills": [
+        "reading"
+      ],
+      "note": "options là phần cuối câu. metadata.labels chứa phần đầu câu; answer_map nối đầu câu với đáp án."
+    },
+    {
+      "code": "sentence_completion",
+      "name": "Hoàn thành câu",
+      "family": "text",
+      "skills": [
+        "reading",
+        "listening"
+      ],
+      "note": "Một chỗ trống dùng accepted_answers, ngăn cách biến thể bằng |; metadata.max_words/max_numbers đặt giới hạn."
+    },
+    {
+      "code": "summary_completion",
+      "name": "Hoàn thành tóm tắt",
+      "family": "text",
+      "skills": [
+        "reading",
+        "listening"
+      ],
+      "note": "Một chỗ trống dùng accepted_answers. Nhiều chỗ trống dùng metadata.blanks, mỗi ô có label và accepted_answers."
+    },
+    {
+      "code": "note_completion",
+      "name": "Hoàn thành ghi chú",
+      "family": "text",
+      "skills": [
+        "reading",
+        "listening"
+      ],
+      "note": "Ví dụ mẫu có hai ô trong metadata.blanks. Mỗi ô có danh sách đáp án và giới hạn từ/số riêng."
+    },
+    {
+      "code": "table_completion",
+      "name": "Hoàn thành bảng",
+      "family": "text",
+      "skills": [
+        "reading",
+        "listening"
+      ],
+      "note": "Đưa bảng vào prompt; một ô dùng accepted_answers, nhiều ô dùng metadata.blanks."
+    },
+    {
+      "code": "flow_chart_completion",
+      "name": "Hoàn thành lưu đồ",
+      "family": "text",
+      "skills": [
+        "reading",
+        "listening"
+      ],
+      "note": "Mô tả các bước trong prompt; mỗi bước trống dùng một phần tử metadata.blanks hoặc accepted_answers."
+    },
+    {
+      "code": "form_completion",
+      "name": "Hoàn thành biểu mẫu",
+      "family": "text",
+      "skills": [
+        "listening"
+      ],
+      "note": "Dùng cho IELTS Listening. Giữ chính xác tên, địa chỉ, số điện thoại trong accepted_answers hoặc metadata.blanks."
+    },
+    {
+      "code": "diagram_label_completion",
+      "name": "Điền nhãn sơ đồ",
+      "family": "text",
+      "skills": [
+        "reading",
+        "listening"
+      ],
+      "note": "BẮT BUỘC thay metadata.image_id=null bằng ID ảnh trong kho Media. Đáp án ghi vào accepted_answers hoặc metadata.blanks."
+    },
+    {
+      "code": "plan_map_labelling",
+      "name": "Điền nhãn bản đồ",
+      "family": "text",
+      "skills": [
+        "listening"
+      ],
+      "note": "Dùng cho IELTS Listening. BẮT BUỘC thay metadata.image_id=null bằng ID ảnh bản đồ; tải và gắn audio riêng trước khi xuất bản."
+    },
+    {
+      "code": "short_answer",
+      "name": "Trả lời ngắn",
+      "family": "text",
+      "skills": [
+        "reading",
+        "listening"
+      ],
+      "note": "accepted_answers chứa các biến thể đúng. metadata.max_words/max_numbers là giới hạn trả lời."
+    },
+    {
+      "code": "essay",
+      "name": "Writing",
+      "family": "writing",
+      "skills": [
+        "writing"
+      ],
+      "note": "metadata.rubric cần đủ task_response, coherence, lexical_resource, grammar. Ghi variant=academic/general và min_words=150/250 tùy task."
+    },
+    {
+      "code": "speaking",
+      "name": "Speaking",
+      "family": "speaking",
+      "skills": [
+        "speaking"
+      ],
+      "note": "metadata.rubric cần đủ fluency, lexical_resource, grammar, pronunciation. Part 2 có cue_card; câu hỏi phụ nằm trong follow_ups."
+    }
+  ]
+}

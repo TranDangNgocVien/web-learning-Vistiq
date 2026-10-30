@@ -1,0 +1,18 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="300" height="139" viewBox="0 0 300 139" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Mountain image">
+<g clip-path="url(#clip0_0_4)">
+<rect width="300" height="139" rx="9" fill="#DCEEFF"/>
+<rect id="Sky glow" x="178" y="8" width="54" height="54" rx="27" fill="#FFF4D0"/>
+<path id="Mountain peak 1" d="M173 17L253.54 124.25H92.4596L173 17Z" fill="#7C9CB9"/>
+<path id="Mountain peak 2" d="M62 52L139.942 142.75H-15.9423L62 52Z" fill="#456C9A"/>
+<path id="Mountain peak 3" d="M234 70L300.684 139.75H167.316L234 70Z" fill="#1E4D82"/>
+<rect id="Flag pole" x="210" y="29" width="2" height="40" fill="#1A3B68"/>
+<rect id="Flag" x="212" y="29" width="23" height="12" rx="2" fill="#EE6D68"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_4">
+<rect width="300" height="139" rx="9" fill="white"/>
+</clipPath>
+</defs>
+</svg>

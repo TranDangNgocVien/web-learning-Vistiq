@@ -1,0 +1,7 @@
+@if($standaloneQuestions->total())
+<section class="panel" aria-label="Câu hỏi chưa gắn bài"><h2>Câu hỏi chưa gắn bài ({{ number_format($standaloneQuestions->total()) }})</h2><p>Các câu hỏi riêng lẻ vẫn được quản lý và gửi duyệt tại ngân hàng này.</p>
+<div class="table-responsive"><table class="admin-table"><thead><tr><th>Mã câu</th><th>Nội dung</th><th>Phần thi</th><th>Trạng thái</th><th>Thao tác</th></tr></thead><tbody>@foreach($standaloneQuestions as $record)
+@php($question=$record['question'])
+<tr><td>Q-{{ $question->id }}</td><td>{{ \Illuminate\Support\Str::limit(strip_tags($record['payload']['prompt'] ?? ''),160) }}</td><td>{{ $question->examPart?->examType?->name }} · {{ $question->examPart?->name }}</td><td>{{ $statusLabels[$record['status']] ?? $record['status'] }}</td><td><div class="assessment-actions"><a class="text-link" href="{{ route('admin.questions.edit',$question) }}">Mở câu hỏi</a>@can('content.edit')@if($record['status']==='draft')<form method="post" action="{{ route('admin.questions.bulk') }}" data-pending-label="Đang gửi…">@csrf<input type="hidden" name="action" value="review"><input type="hidden" name="ids[]" value="{{ $question->id }}"><button class="button button-quiet" type="submit">Gửi duyệt</button></form>@endif @include('pages.admin.assessment.question-bank.workspace.question-delete-action', ['question'=>$question]) @endcan</div></td></tr>
+@endforeach</tbody></table></div>{{ $standaloneQuestions->links() }}</section>
+@endif

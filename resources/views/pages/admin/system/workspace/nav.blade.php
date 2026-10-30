@@ -1,0 +1,1 @@
+<nav class="profile-tabs" aria-label="Vận hành hệ thống">@can('settings.manage')<a href="{{ route('admin.settings.index') }}">Cài đặt</a><a href="{{ route('admin.settings.database') }}">Sao lưu / phục hồi</a><a href="{{ route('admin.settings.jobs') }}">Tác vụ</a>@endcan @can('audit.view')<a href="{{ route('admin.audit.index') }}">Audit log</a>@endcan</nav>

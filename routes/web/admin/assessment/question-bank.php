@@ -1,0 +1,60 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+use VistiqAdmin\Http\Controllers\Admin\Assessment\QuestionBank\QuestionController;
+use VistiqAdmin\Http\Controllers\Admin\Assessment\QuestionBank\QuestionBankWorkflowController;
+use VistiqAdmin\Http\Controllers\Admin\Assessment\QuestionBank\StimulusController;
+use VistiqAdmin\Http\Controllers\Admin\Assessment\QuestionBank\QuestionEditorController;
+use VistiqAdmin\Http\Controllers\Admin\Assessment\QuestionBank\MediaController;
+use VistiqAdmin\Http\Controllers\Admin\Assessment\QuestionBank\SubjectiveQuestionController;
+
+Route::get('/questions/import-template', [QuestionController::class, 'importTemplate'])->middleware('can:content.edit')->name('questions.import-template');
+Route::get('/questions/import-progress/{token}', [QuestionController::class, 'importProgress'])->middleware('can:content.edit')->name('questions.import-progress');
+Route::post('/questions/import/preview', [QuestionController::class, 'previewWorkbook'])->middleware('can:content.edit')->name('questions.import.preview');
+Route::post('/questions/import/audio', [QuestionController::class, 'stageWorkbookAudio'])->middleware('can:content.edit')->name('questions.import.audio');
+Route::post('/questions/import/discard-audio', [QuestionController::class, 'discardWorkbookAudio'])->middleware('can:content.edit')->name('questions.import.discard-audio');
+Route::post('/questions/import/confirm', [QuestionController::class, 'confirmWorkbook'])->middleware('can:content.edit')->name('questions.import.confirm');
+Route::get('/questions/export', [QuestionBankWorkflowController::class, 'export'])->middleware('can:content.view')->name('questions.export');
+Route::post('/questions/import', [QuestionController::class, 'import'])->middleware('can:content.edit')->name('questions.import');
+Route::post('/questions/approve', [QuestionBankWorkflowController::class, 'approveQuestions'])->middleware(['can:content.review', 'throttle:30,1'])->name('questions.approve');
+Route::post('/questions/bulk', [QuestionBankWorkflowController::class, 'bulk'])->middleware('can:content.edit')->name('questions.bulk');
+Route::get('/questions/bank-preview/{kind}/{id}', [QuestionController::class, 'bankPreview'])->middleware('can:content.view')->whereNumber('id')->name('questions.bank-preview');
+Route::get('/questions/listening', [StimulusController::class, 'listening'])->middleware('can:content.view')->name('questions.listening');
+foreach (['writing', 'speaking'] as $skill) {
+    Route::get('/questions/'.$skill, [SubjectiveQuestionController::class, 'index'])->defaults('skill', $skill)->middleware('can:content.view')->name('questions.'.$skill);
+    Route::post('/questions/'.$skill.'/review', [SubjectiveQuestionController::class, 'review'])->defaults('skill', $skill)->middleware(['can:content.edit', 'throttle:30,1'])->name('questions.'.$skill.'.review');
+}
+Route::get('/questions/thpt', [QuestionController::class, 'thpt'])->middleware('can:content.view')->name('questions.thpt');
+Route::get('/questions/deleted', [QuestionController::class, 'deleted'])->middleware('can:content.view')->name('questions.deleted');
+Route::delete('/questions/{question}', [QuestionController::class, 'destroy'])->middleware('can:content.edit')->whereNumber('question')->name('questions.destroy');
+Route::post('/questions/deleted/{question}/restore', [QuestionController::class, 'restore'])->middleware('can:content.edit')->whereNumber('question')->name('questions.restore');
+Route::get('/readings/{stimulus}/question-editor', [StimulusController::class, 'questionEditor'])->middleware('can:content.view')->name('readings.question-editor');
+Route::get('/questions/editor-catalog', [QuestionEditorController::class, 'catalog'])->middleware('can:content.view')->name('questions.editor-catalog');
+Route::post('/questions/preview', [QuestionController::class, 'preview'])->middleware('can:content.edit')->name('questions.preview');
+Route::get('/questions/{question}/history', [QuestionEditorController::class, 'history'])->middleware('can:content.view')->name('questions.history');
+Route::get('/questions/{question}/exam-links', [QuestionEditorController::class, 'links'])->middleware('can:content.view')->name('questions.exam-links');
+Route::post('/questions/{question}/exam-links/{exam}', [QuestionEditorController::class, 'attach'])->middleware('can:content.edit')->name('questions.exam-links.attach');
+Route::delete('/questions/{question}/exam-links/{exam}', [QuestionEditorController::class, 'detach'])->middleware('can:content.edit')->name('questions.exam-links.detach');
+Route::resource('/questions', QuestionController::class)->except(['show', 'destroy'])->middleware('can:content.view');
+Route::get('/readings', [StimulusController::class, 'reading'])->middleware('can:content.view')->name('readings.index');
+Route::post('/readings', [StimulusController::class, 'storeReading'])->middleware('can:content.edit')->name('readings.store');
+Route::post('/readings/review-bulk', [StimulusController::class, 'reviewReadings'])->middleware(['can:content.edit', 'throttle:30,1'])->name('readings.review-bulk');
+Route::get('/audio', [StimulusController::class, 'audio'])->middleware('can:content.view')->name('audio.index');
+Route::post('/audio', [StimulusController::class, 'storeAudio'])->middleware('can:content.edit')->name('audio.store');
+Route::post('/audio/batch', [StimulusController::class, 'storeAudioBatch'])->middleware('can:content.edit')->name('audio.batch.store');
+Route::post('/audio/bulk-delete', [StimulusController::class, 'destroyAudio'])->middleware('can:content.edit')->name('audio.bulk-delete');
+Route::put('/stimuli/{stimulus}', [StimulusController::class, 'update'])->middleware('can:content.edit')->name('stimuli.update');
+Route::get('/groups', [QuestionBankWorkflowController::class, 'groups'])->middleware('can:content.view')->name('groups.index');
+Route::post('/groups', [QuestionBankWorkflowController::class, 'storeGroup'])->middleware('can:content.edit')->name('groups.store');
+Route::put('/groups/{group}', [QuestionBankWorkflowController::class, 'updateGroup'])->middleware('can:content.edit')->name('groups.update');
+Route::delete('/groups/{group}', [QuestionBankWorkflowController::class, 'destroyGroup'])->middleware('can:content.edit')->name('groups.destroy');
+Route::get('/media', [MediaController::class, 'index'])->middleware('can:content.view')->name('media.index');
+Route::get('/resources', [MediaController::class, 'index'])->middleware('can:content.view')->name('resources.index');
+Route::get('/resources/{resource}/edit', [MediaController::class, 'editResource'])->middleware('can:content.view')->name('resources.edit');
+Route::put('/resources/{resource}/questions', [MediaController::class, 'syncQuestions'])->middleware('can:content.edit')->name('resources.questions.sync');
+Route::post('/resources/{resource}/groups', [MediaController::class, 'setGroupAudio'])->middleware('can:content.edit')->name('resources.groups.set');
+Route::delete('/media', [MediaController::class, 'destroy'])->middleware('can:content.edit')->name('media.destroy');
+Route::post('/media', [MediaController::class, 'store'])->middleware('can:content.edit')->name('media.store');
+Route::put('/media/{asset}', [MediaController::class, 'update'])->middleware('can:content.edit')->name('media.update');
+Route::get('/media/{asset}/waveform', [MediaController::class, 'waveform'])->middleware('can:content.view')->name('media.waveform');
+Route::get('/media/{asset}', [MediaController::class, 'show'])->middleware('can:content.view')->name('media.show');

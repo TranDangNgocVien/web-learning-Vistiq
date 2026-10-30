@@ -1,0 +1,15 @@
+.admin-confirm-open { overflow: hidden; }
+.admin-confirm { position: fixed; z-index: 1200; inset: 0; display: flex; align-items: center; justify-content: center; padding: 24px; }
+.admin-confirm[hidden] { display: none; }
+.admin-confirm-backdrop { position: absolute; inset: 0; background: rgba(11, 27, 67, .16); backdrop-filter: blur(2px); }
+.admin-confirm-dialog { position: relative; width: min(520px, calc(100vw - 32px)); max-height: calc(100dvh - 32px); overflow-y: auto; overscroll-behavior: contain; padding: 18px 20px 16px; border: 1px solid #b9e4ce; border-radius: 12px; color: #176b45; background: #f0fbf5; box-shadow: 0 12px 32px rgba(18, 52, 39, .2); }
+.admin-confirm-dialog h2 { margin: 0 0 6px; color: #176b45; font-size: 16px; line-height: 1.35; }
+.admin-confirm-dialog p { margin: 0; color: #285f49; font-size: 13px; }
+.admin-confirm-actions { display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 18px; }
+.admin-confirm-actions .button { min-width: 112px; }
+@media (max-width: 640px) {
+    .admin-confirm { padding: 16px; }
+    .admin-confirm-dialog { width: 100%; }
+    .admin-confirm-actions { align-items: stretch; }
+    .admin-confirm-actions .button { flex: 1; min-width: 0; min-height: 44px; white-space: normal; }
+}
